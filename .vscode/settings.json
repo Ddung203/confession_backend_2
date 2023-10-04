@@ -1,0 +1,166 @@
+{
+  "liveServer.settings.CustomBrowser": "chrome",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.iconTheme": "vscode-icons",
+  "code-runner.runInTerminal": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "explorer.confirmDelete": false,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "tabnine.experimentalAutoImports": true,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "vsicons.dontShowNewVersionMessage": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "css": "css"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.suggestions": true,
+  "color-highlight.markerType": "underline",
+  "liveServer.settings.donotVerifyTags": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "editor.wordWrapColumn": 110,
+  "editor.wordWrap": "on",
+  "editor.letterSpacing": 0.5,
+  "powermode.enabled": true,
+  "indentRainbow.colors": [
+    "rgba(3,4,94,0.125)",
+    "rgba(2,62,138,0.125)",
+    "rgba(0,119,182,0.125)",
+    "rgba(0,150,199,0.125)",
+    "rgba(0,180,216,0.125)",
+    "rgba(72,202,228,0.125)",
+    "rgba(144,224,239,0.125)"
+  ],
+  "indentRainbow.colorOnWhiteSpaceOnly": true,
+  "explorer.confirmDragAndDrop": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "powermode.combo.location": "statusbar",
+  "powermode.combo.counterEnabled": "hide",
+  "powermode.combo.timerEnabled": "default",
+  "powermode.shake.enabled": false,
+  "powermode.explosions.size": 5,
+  "html.format.wrapLineLength": 125,
+  "prettier.tabWidth": 2,
+  "editor.formatOnSave": true,
+  "terminal.integrated.enableMultiLinePasteWarning": true,
+  "terminal.integrated.copyOnSelection": true,
+  "editor.guides.bracketPairs": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.format.enable": true,
+  "highlight-matching-tag.styles": null,
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "//",
+      "color": "#98C379",
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+
+      "color": "#6759ff",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ],
+
+  "editor.fontFamily": "SF Mono Medium ,Jetbrains Mono,Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "100",
+  "terminal.integrated.smoothScrolling": true,
+  "c-cpp-compile-run.run-in-external-terminal": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "C_Cpp.default.cppStandard": "c++11",
+  "php.validate.executablePath": "C:/xampp/php/php.exe",
+  "phpserver.port": 3030,
+  "phpserver.phpConfigPath": "C:\\xampp\\php\\php.ini",
+  "phpserver.phpPath": "C:\\xampp\\php\\php.exe",
+  "terminal.integrated.env.windows": {},
+  "editor.lineHeight": 2,
+  "editor.fontSize": 17,
+  "workbench.colorTheme": "Evondev Dracula Normal Contrast",
+  "editor.tabSize": 2,
+  "prettier.useEditorConfig": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.experimental.configFile": null,
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "console-ninja.showWhatsNew": false,
+  "javascript.updateImportsOnFileMove.enabled": "prompt",
+  "explorer.compactFolders": false,
+  "diffEditor.experimental.showMoves": true,
+  "terminal.integrated.hideOnStartup": "whenEmpty",
+  "editor.inlayHints.enabled": "on",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "javascript.inlayHints.parameterNames.enabled": "none"
+}

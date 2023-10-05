@@ -1,4 +1,4 @@
-import { query } from "../../config/database.js";
+import { query } from "../config/database.js";
 
 class PostModel {
   constructor(authorId, content) {

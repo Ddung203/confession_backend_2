@@ -1,14 +1,14 @@
 import express from "express";
-import "dotenv/config.js";
 import bodyParser from "body-parser";
+import "dotenv/config.js";
 
 //router
-import userRouter from "./src/routers/user.routers.js";
-import authRouter from "./src/routers/auth.router.js";
-import postRouter from "./src/routers/post.router.js";
+import userRouter from "./routers/user.routers.js";
+import authRouter from "./routers/auth.router.js";
+import postRouter from "./routers/post.router.js";
 
 //middleware
-import appMiddleware from "./src/middlewares/app.middleware.js";
+import appMiddleware from "./middlewares/app.middleware.js";
 
 const app = express();
 const port = 3000;

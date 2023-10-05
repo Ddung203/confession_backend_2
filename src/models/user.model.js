@@ -69,19 +69,19 @@ class UserModel {
   }
 
   static async findById(id) {
-    const sql = "SELECT * FROM user WHERE userId = ?";
+    const sql = "SELECT * FROM user WHERE id = ?";
     const res = await query(sql, [id]);
     return res;
   }
 
   static async findByName(name) {
-    const sql = "SELECT * FROM user WHERE username = ?";
+    const sql = "SELECT * FROM user WHERE name = ?";
     const res = await query(sql, [name]);
     return res;
   }
 
   static async findByIdAndDelete(id) {
-    const sql = "UPDATE user SET deleted = true WHERE userId = ?";
+    const sql = "UPDATE user SET deleted = true WHERE id = ?";
     await query(sql, [id]);
   }
 
@@ -89,8 +89,8 @@ class UserModel {
     if (data instanceof Array) {
       return data.map((value) => {
         return {
-          userId: value.userId,
-          username: value.username,
+          id: value.id,
+          name: value.name,
           image: value.image,
           intro: value.intro,
           profile: value.profile,
@@ -101,8 +101,8 @@ class UserModel {
       });
     }
     return {
-      userId: data.userId,
-      username: data.username,
+      id: data.id,
+      name: data.name,
       image: data.image,
       intro: data.intro,
       profile: data.profile,

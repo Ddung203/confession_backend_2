@@ -26,4 +26,24 @@ postRouter(app);
 
 app.use(appMiddleware);
 
+app.use((err, req, res, next) => {
+  console.error(err.message, err.stack);
+  if (err.status === 400) {
+    return res.status(400).json({
+      statusCode: 400,
+      message: err.message,
+    });
+  }
+  return res.status(500).json({
+    statusCode: 500,
+    message: "Internal Server Error",
+    data: null,
+  });
+});
+
+// app.use((req, res) => {
+//   console.log(req);
+//   res.status(400).json({ error: "BAD REQUEST" });
+// });
+
 app.listen(port, () => {});

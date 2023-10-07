@@ -48,7 +48,7 @@ class UserModel {
   }
 
   async create() {
-    const sql = "INSERT INTO user (username, image, deviceId) VALUES (?, ?, ?)";
+    const sql = "INSERT INTO user (name, image, deviceId) VALUES (?, ?, ?)";
     const res = await query(sql, [this.name, this.image, this.deviceId]);
     return res;
   }
@@ -91,6 +91,7 @@ class UserModel {
         return {
           id: value.id,
           name: value.name,
+          deviceId: value.deviceId,
           image: value.image,
           intro: value.intro,
           profile: value.profile,
@@ -103,6 +104,7 @@ class UserModel {
     return {
       id: data.id,
       name: data.name,
+      deviceId: data.deviceId,
       image: data.image,
       intro: data.intro,
       profile: data.profile,

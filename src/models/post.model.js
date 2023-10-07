@@ -37,8 +37,8 @@ class PostModel {
           id: value.id,
           authorId: value.authorId,
           content: value.content,
-          createdAt: value.createdAt,
           publishedAt: value.publishedAt,
+          createdAt: value.createdAt,
         };
       });
     }

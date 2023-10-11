@@ -48,13 +48,16 @@ class UserModel {
   }
 
   async create() {
-    const sql = "INSERT INTO user (name, image, deviceId) VALUES (?, ?, ?)";
-    const res = await query(sql, [this.name, this.image, this.deviceId]);
+    const query1 = "INSERT INTO user ( deviceId) VALUES (?)";
+    const response = await query(query1, [this.deviceId]);
+
+    const sql = "INSERT INTO user_detail (name, image) VALUES (?, ?)";
+    const res = await query(sql, [this.name, this.image]);
     return res;
   }
 
   static async find(limit = 0) {
-    var sql = "SELECT * FROM user";
+    var sql = "SELECT * FROM user_detail";
     if (limit > 0) {
       sql += " LIMIT " + limit;
     }
@@ -69,13 +72,14 @@ class UserModel {
   }
 
   static async findById(id) {
-    const sql = "SELECT * FROM user WHERE id = ?";
+    const sql =
+      "SELECT id, deviceId, deleted, registedAt FROM user WHERE id = ?";
     const res = await query(sql, [id]);
     return res;
   }
 
   static async findByName(name) {
-    const sql = "SELECT * FROM user WHERE name = ?";
+    const sql = "SELECT * FROM user_detail WHERE name = ?";
     const res = await query(sql, [name]);
     return res;
   }

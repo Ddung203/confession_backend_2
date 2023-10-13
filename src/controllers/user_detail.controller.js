@@ -1,5 +1,4 @@
 import UserDetailModel from "../models/user_detail.model.js";
-import useDetailRoute from "../../../src/routers/user_detail.router.js";
 //create detail user when not have infor
 const createUserDetail = async (req,res,next) => {
     const {id,name,image,intro,profile,phone,email} = req.body;

@@ -14,7 +14,8 @@ class PostModel {
   }
 
   async create() {
-    const sql = "INSERT INTO post (authorId, content) VALUES (?, ?)";
+    const sql =
+      "INSERT INTO `post` (`authorId`, `content`, `published`, `createdAt`, `updatedAt`, `deletedAt`) VALUES (?, ?, '1', current_timestamp(), NULL, NULL);";
     const res = await query(sql, [this.authorId, this.content]);
     return res;
   }
@@ -25,9 +26,15 @@ class PostModel {
     return res;
   }
 
-  static async delete(id) {
-    const sql = "UPDATE post SET published = 0 WHERE id = ? AND published = 1";
-    await query(sql, [id]);
+  static async hide(id, authorId) {
+    const sql = "UPDATE post SET published = 0 WHERE id = ? AND authorId = ?";
+    const res = await query(sql, [id, authorId]);
+    return res;
+  }
+  static async show(id, authorId) {
+    const sql = "UPDATE post SET published = 1 WHERE id = ? AND authorId = ?";
+    const res = await query(sql, [id, authorId]);
+    return res;
   }
 
   static respose(data) {

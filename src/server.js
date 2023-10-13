@@ -1,14 +1,15 @@
 import express from "express";
 import bodyParser from "body-parser";
 import "dotenv/config.js";
+import morgan from "morgan";
 
 //router
 import userRouter from "./routers/user.routers.js";
 import authRouter from "./routers/auth.router.js";
 import postRouter from "./routers/post.router.js";
-
+import useDetailRouter from "./routers/user_detail.router.js";
 //middleware
-import appMiddleware from "./middlewares/app.middleware.js";
+import errorHandler from "./middlewares/error.middleware.js";
 
 const app = express();
 const port = 3000;
@@ -19,31 +20,15 @@ app.use(
     extended: true,
   })
 );
+app.use(morgan("dev"));
 
 authRouter(app);
 userRouter(app);
 postRouter(app);
+useDetailRouter(app);
 
-app.use(appMiddleware);
+app.use(errorHandler);
 
-app.use((err, req, res, next) => {
-  console.error(err.message, err.stack);
-  if (err.status === 400) {
-    return res.status(400).json({
-      statusCode: 400,
-      message: err.message,
-    });
-  }
-  return res.status(500).json({
-    statusCode: 500,
-    message: "Internal Server Error",
-    data: null,
-  });
+app.listen(port, () => {
+  console.log(`Listen port ${port}`);
 });
-
-// app.use((req, res) => {
-//   console.log(req);
-//   res.status(400).json({ error: "BAD REQUEST" });
-// });
-
-app.listen(port, () => {});

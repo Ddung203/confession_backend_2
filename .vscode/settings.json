@@ -162,5 +162,5 @@
   "terminal.integrated.hideOnStartup": "whenEmpty",
   "editor.inlayHints.enabled": "on",
   "typescript.inlayHints.parameterNames.enabled": "all",
-  "javascript.inlayHints.parameterNames.enabled": "none"
+  "javascript.inlayHints.parameterNames.enabled": "all"
 }
